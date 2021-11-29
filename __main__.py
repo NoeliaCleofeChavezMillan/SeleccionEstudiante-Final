@@ -1,9 +1,9 @@
-from src.seleccionestudiante.modelo.Asignatura import Asignatura, AsignaturaEstudiante
-from src.seleccionestudiante.modelo.Estudiante import Estudiante
-from src.seleccionestudiante.modelo.Equipo import Equipo
-from src.seleccionestudiante.modelo.Actividad import Actividad
-from src.seleccionestudiante.logica.Sorteo import Sorteo
-from src.seleccionestudiante.modelo.declarative_base import Session, engine, Base
+from src.modelo.Asignatura import Asignatura
+from src.modelo import Estudiante
+from src.modelo import Equipo
+from src.modelo import Actividad
+from src.logica import ControladorEstudiante
+from src.modelo.declarative_base import Session, engine, Base
 from datetime import datetime
 
 def añadeRegistos():
@@ -99,7 +99,7 @@ def eliminarRegistros():
    session.close ( )
 
 if __name__ == '__main__':
-   sorteo=Sorteo()
+   sorteo=ControladorEstudiante()
    sorteo.agregar_asignatura ( "Matemática discreta")
    while True:
       print ( "0 Salir" )

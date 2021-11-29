@@ -1,16 +1,16 @@
 import unittest
 from datetime import datetime
-from src.seleccionestudiante.modelo.Asignatura import Asignatura
-from src.seleccionestudiante.modelo.Estudiante import Estudiante
-from src.seleccionestudiante.modelo.Equipo import Equipo
-from src.seleccionestudiante.modelo.Actividad import Actividad
-from src.seleccionestudiante.logica.Sorteo import Sorteo
-from src.seleccionestudiante.modelo.declarative_base import Session
+from src.modelo.Asignatura import Asignatura
+from src.modelo import Estudiante
+from src.modelo import Equipo
+from src.modelo import Actividad
+from src.logica import ControladorEstudiante
+from src.modelo.declarative_base import Session
 
 class AsignaturaTestCase ( unittest.TestCase ) :
     def setUp ( self ) :
         # Crea una sorteo para hacer las pruebas
-        self.sorteo = Sorteo ( )
+        self.sorteo = ControladorEstudiante ()
 
         # Abre la sesión
         self.session = Session ( )
