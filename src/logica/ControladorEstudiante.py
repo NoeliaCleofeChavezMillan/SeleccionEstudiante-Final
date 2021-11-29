@@ -1,6 +1,6 @@
-from src.seleccionestudiante.modelo.Asignatura import Asignatura
-from src.seleccionestudiante.modelo.Estudiante import Estudiante
-from src.seleccionestudiante.modelo.declarative_base import engine, Base, session
+from src.modelo.Asignatura import Asignatura
+from src.modelo.Estudiante import Estudiante
+from src.modelo.declarative_base import engine, Base, session
 
 class Sorteo():
 
