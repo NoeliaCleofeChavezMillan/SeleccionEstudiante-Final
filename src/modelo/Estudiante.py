@@ -5,7 +5,7 @@ from .declarative_base import Base
 
 class Estudiante(Base):
     __tablename__="estudiante"
-    idEstudiante=Column(Integer,primary_key = True)
+    idEstudiante=Column(Integer, primary_key = True)
     apellidoPaterno = Column ( String )
     apellidoMaterno = Column ( String )
     nombres = Column ( String )
